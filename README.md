@@ -17,5 +17,3 @@ HEJ PÅ ER ALLESAMMANS
 
 
 HETTSSTTS
-
-...Vad gör ni?
