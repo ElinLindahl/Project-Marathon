@@ -1,5 +1,5 @@
-var Model = function() {
-
+var MovieModel = function() {
+	console.log('Hej');
 this.getmovie = function () {
 	
 	var apikey = "tmaras95gturfua7r8tdvrym";
@@ -15,6 +15,7 @@ this.getmovie = function () {
 			url: moviesSearchUrl + '&q=' + encodeURI(query),
 			dataType: "jsonp",
 			success: searchCallback
+			
 		});
 	});
 
@@ -22,7 +23,8 @@ this.getmovie = function () {
 	function searchCallback(data) {
 		$(document.body).append('Found ' + data.total + ' results for ' + query);
 		var movies = data.movies;
- 
+ 		console.log(movies);
+ 		
 	 	$.each(movies, function(index, movie) {
 	   		$(document.body).append('<h1>' + movie.title + '</h1>');
 	   		$(document.body).append('<img src="' + movie.posters.thumbnail + '" />');
