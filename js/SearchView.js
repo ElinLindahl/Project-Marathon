@@ -7,6 +7,6 @@ var SearchView = function (container, Model) { //The view
 	console.log(Model.getmovie());
 
 	
-	this.AllMovies = container.find("#Movies");
+	this.AllMovies = container.find("#movies");
 }
 

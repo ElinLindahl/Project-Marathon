@@ -26,7 +26,7 @@ this.getmovie = function () {
  		console.log(movies);
  		
 	 	$.each(movies, function(index, movie) {
-	   		$(document.body).append('<h1>' + movie.title + '</h1>');
+	   		$(document.body).append('<h5>' + movie.title + '</h5>');
 	   		$(document.body).append('<img src="' + movie.posters.thumbnail + '" />');
 		});
 
