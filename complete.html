@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="movieplanner.css">
+    <link rel="stylesheet" type="text/css" href="movieplanner.css">
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -26,38 +29,46 @@
     <title>Movie Marathon Planner</title> 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> 
 
   </head>
   <body>
-  
-  <div class="container" style=width:100%;>
+    
+    <!-- START Start page --> 
+    <div class="container-fluid" id="start-page">
+      <div class="row" id="header">
+        <div class="col-md-12">
+          <p id="headtitle"><h1>Movie Planner</h1>
+          <h3> Create your own movie marathon!</h3>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class= "col-md-4" id ="about_box">
+          <h2>Welcome</h2>
+        </div>
+      </div>
 
-		<div id="Header">
-			<div class="row" style= "font-size: 100pt; font-family: Chalkboard; background-color:#FF8C7A;">
-	 			<h1><span style= "font-size: 45pt; font-family: Chalkboard; background-color:#FF8C7A; margin-left:5%">MOVIE MARATHON </span> <span style= "font-size: 20pt"><em> Plan your own movie marathon!</em></span></h1>
-			</div>
-		</div>
+    <!-- END Start page -->
 
 
-		<div class="row">
+      <div class="row">
+        <div class="col-md-4" id="searchView">
+          <span id="search"></span>
+          <p>Hej</p>
+        </div>
 
-			<div class="col-md-4" id="searchView">
-  					<span id="search"></span>
-  					<p>Hej</p>
-  			</div>
-
-			<div class="col-md-4" id="marathonListView">
-  					<span id="list"></span>
-  					<p>Hej</p>
-  			</div>
-  			
-  			<div class="col-md-4" id="createNewView">
-  					<span id="createNew"></span>
-  					<p>Hej</p>
-  			</div>
-		
-		</div>
+        <div class="col-md-4" id="marathonListView">
+          <span id="list"></span>
+          <p>Hej</p>
+        </div>
+        
+        <div class="col-md-4" id="createNewView">
+          <span id="createNew"></span>
+          <p>Hej</p>
+        </div>
+       </div>
+    </div>
   
   
   

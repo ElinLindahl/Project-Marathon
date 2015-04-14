@@ -1,0 +1,51 @@
+html, body {
+	height: 100%;
+}
+
+h1 {
+	margin-left: 50px;
+	display: inline;
+	text-transform: uppercase; 
+}
+
+h2 {
+	margin-left: 10px;
+
+}
+
+h3{
+	margin-left: 10px;
+	display: inline;
+}
+
+.container {
+	width: 100%;
+}
+
+#header {
+	padding:2%;
+	background-color:rgba(226,255,247,0.85);
+}
+
+
+#row{
+	font-size: 45pt; 
+	font-family: Arial; 
+	background-color: #FF8C7A; 
+	margin-left: 10%;
+}
+#searchView{
+	border-right: solid;
+	border-color: #000000;
+
+}
+#marathonListView{
+	border-right: solid;
+	border-color: #000000;
+
+}
+
+
+
+
+
