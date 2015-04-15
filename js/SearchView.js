@@ -1,9 +1,9 @@
 var SearchView = function (container, Model) {
-	this.update = function(){ //The view
-	
 	this.AllMovies = container.find("#movies");
-	Movies = Model.getmovie();
-	this.AllMovies.html(Movies);
+	this.update = function(obj){ 
+		Movies = Model.getmovie();
+		console.log(Movies);
+		this.AllMovies.html(Movies);
 	}
 
 	this.update();

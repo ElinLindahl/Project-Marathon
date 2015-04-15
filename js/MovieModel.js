@@ -7,7 +7,7 @@ var MovieModel = function() {
 
 	var notifyObservers = function(obj) {
 		for(i in observerlist) {
-			observerlist[i].update();
+			observerlist[i].update(obj);
 		}
 	} 
 	
@@ -39,6 +39,8 @@ var MovieModel = function() {
 	 		$.each(movies, function(index, movie) {
 	   			$(document.body).append('<h5>' + movie.title + '</h5>');
 	   			$(document.body).append('<img src="' + movie.posters.thumbnail + '" />');
+	   			notifyObservers();
+
 			});
 
 		}
