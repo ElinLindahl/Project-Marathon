@@ -1,8 +1,8 @@
 var SearchView = function (container, Model) {
 	this.AllMovies = container.find("#movies");
+
 	this.update = function(obj){ 
-		Movies = Model.getmovie();
-		console.log(Movies);
+		Movies = Model.getmovie('Gone with the Wind');
 		this.AllMovies.html(Movies);
 	}
 
