@@ -1,20 +1,24 @@
 var SearchView = function (container, Model) {
 	this.AllMovies = container.find("#movies");
+	str = '';
 
 	this.update = function(obj){
-		console.log('hej');
 		if (obj){
 			console.log(obj);
-			Movies = obj;	
-
-			this.AllMovies.html(Movies);
-
+			Movies = obj;
+			for(i = 0; i < Movies.length; i++){
+				str += "<p>";
+				str += Movies[i].title;
+				str += "</p>";
+				
+			}	
 		}
+	
+		this.AllMovies.html(str);
 	}
-
 	this.update();
 	Model.addObserver(this);
 
-	Model.getmovie("Top gun");
+	Model.getmovie("Star wars");
 
 }
