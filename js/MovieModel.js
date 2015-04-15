@@ -12,6 +12,7 @@ serchList = [];
 		}
 	} 
 	
+	//Movie by title
 	this.getmovie = function (query) {
 	
 		var apikey = "tmaras95gturfua7r8tdvrym";
@@ -19,7 +20,6 @@ serchList = [];
 
 		// construct the uri with our apikey
 		var moviesSearchUrl = baseUrl + '/movies.json?apikey=' + apikey;
-	//	var query = "Gone with the Wind";
 
 		$(document).ready(function() {
 			// send off the query
@@ -29,8 +29,6 @@ serchList = [];
 				success: function (data) {
 	        		movies = data.movies;
 	        		console.log(movies);
-	        		//ggah = movies[0].title;
-	        		//console.log(movies[0].title);
 		 			notifyObservers(movies);
 		 		}
 			

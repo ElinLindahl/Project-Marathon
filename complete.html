@@ -17,15 +17,21 @@
 	<script src="js/app.js"></script>
   <script src="js/MovieModel.js"></script>
 	<script src="js/SearchView.js"></script>
+  <script src="js/SearchviewController.js"></script>
 	<!-- script src="js/MainController.js"></script>
-
-	<script src="js/SearchviewController.js"></script>
+  
 	
 	<script src="js/CreateNewView.js"></script>
 	<script src="js/MarathonListView.js"></script>
 	<script src="js/OverviewView.js"></script-->
 	
-	
+	<script type="text/javascript">
+  function showInfo(id) {
+      $("#description"+id).toggle(100);
+    console.log(id);
+  }
+  </script>
+
 					    
     <title>Movie Marathon Planner</title> 
 
@@ -63,7 +69,7 @@
 	        	</span>
 	   		 	</div>
 	   		 	<div id="s">
-            <h5>Sökresultat</h5><span id="movies"></span>  
+            <h5>Sökresultat</h5><span class="movies"></span>
           </div>
   		  </div>
 
