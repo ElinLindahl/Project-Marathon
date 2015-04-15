@@ -8,7 +8,7 @@ serchList = [];
 
 	var notifyObservers = function(obj) {
 		for(i in observerlist) {
-			observerlist[i].update();
+			observerlist[i].update(obj);
 		}
 	} 
 	
@@ -28,9 +28,10 @@ serchList = [];
 				dataType: "jsonp",
 				success: function (data) {
 	        		movies = data.movies;
-	        		ggah = movies[0].title;
-	        		console.log(movies[0].title);
-		 			notifyObservers();
+	        		console.log(movies);
+	        		//ggah = movies[0].title;
+	        		//console.log(movies[0].title);
+		 			notifyObservers(movies);
 		 		}
 			
 			});
