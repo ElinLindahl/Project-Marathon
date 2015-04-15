@@ -1,4 +1,15 @@
+observerlist = [];
 var MovieModel = function() {
+
+	this.addObserver = function(observer) {
+		observerlist.push(observer);
+	}
+
+	var notifyObservers = function(obj) {
+		for(i in observerlist) {
+			observerlist[i].update();
+		}
+	} 
 	
 	this.getmovie = function () {
 	

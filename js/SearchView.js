@@ -1,12 +1,12 @@
-var SearchView = function (container, Model) { //The view
-
-	
-//	var Movies = container.find("#Movies");
-	
-	var AllMovies = Model.getmovie();
-	//console.log(Model.getmovie());
-
+var SearchView = function (container, Model) {
+	this.update = function(){ //The view
 	
 	this.AllMovies = container.find("#movies");
-}
+	Movies = Model.getmovie();
+	this.AllMovies.html(Movies);
+	}
 
+	this.update();
+	Model.addObserver(this);
+
+}
