@@ -1,10 +1,13 @@
 var SearchView = function (container, Model) {
+	
+	this.searchbutton = container.find("#searchbutton");
 	this.AllMovies = container.find(".movies");
-	str = '';
+	
 	box = '';
 
 
 	this.update = function(obj){
+		str = '';
 		if (obj){
 			Movies = obj;
 			for(i = 0; i < Movies.length; i++){
@@ -16,10 +19,22 @@ var SearchView = function (container, Model) {
 		}
 
 	this.AllMovies.html(str);
+	this.tryIt = function(){ //since the controller doesn't exists yet the first time the view is runned
+				try{
+					SearchViewController.refresh();
+				}
+				catch(err){
+
+				}
+			}
+			this.tryIt();
+	
 	}
 
 	this.update();
+	
+	
 	Model.addObserver(this);
-	Model.getmovie("Star wars");
+//	Model.getmovie("Star wars");
 
 }

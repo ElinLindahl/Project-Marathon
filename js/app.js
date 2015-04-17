@@ -2,10 +2,11 @@ $(function() {
 	//We instantiate our model
 	var Model = new MovieModel();
 	var searchView = new SearchView($("#SearchView"),Model);
-
+	
 	//var searchViewController = new SearchviewController(searchView, Model);
 	var createNewView = new CreateNewView($("#CreateNewView"),Model);
 
+	var searchViewController = new SearchViewController(searchView, Model);
 	var createNewViewController = new CreateNewViewController(createNewView, Model);
 	
 	
