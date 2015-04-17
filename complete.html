@@ -29,8 +29,10 @@
 	
 	<script type="text/javascript">
   function showInfo(id) {
-      $("#description"+id).toggle(100);
-    console.log(id);
+    $("#description"+id).toggle(100);
+  }
+  function showForm() {
+    $("#Marathon").toggle(100);
   }
   </script>
 
@@ -48,13 +50,13 @@
       <div class="row" id="header">
         <div class="col-md-12">
           <p id="headtitle"><h1>Movie Planner</h1>
-          <h3> Create your own movie marathon!</h3>
+          <h3 class="h3styled"> Create your own movie marathon!</h3>
         </div>
       </div>
       
       <div class="row">
         <div class= "col-md-4" id ="about_box">
-          <h2>Welcome</h2>
+          <h2></h2>
         </div>
       </div>
 
@@ -82,7 +84,7 @@
 			
 			<div id="s">
         <div id="createField">
-        <h3>Create a new movie marathon:</h3></br></br>
+        <h3 onclick='showForm()'>Create a new movie marathon:</h3></br></br>
         <form id='Marathon'>
           <p style='margin-left:3%'>Name:</p>
           <input id='MarathonName' type='text' class='form-control' placeholder='Enter name of the marathon' style='margin-left:3%'></br>
@@ -91,7 +93,7 @@
           <p style='margin-left:3%'>Date:</p><input id='Date' type='text' class='form-control'>
           <p style='margin-left:3%'>Time:</p><input id='Time' type='text' class='form-control'></div>
           <div><span class='input-group-btn'>
-          <button id='submitbutton' class='btn btn-default' type='button' style='margin-top:35%; margin-left:75%;' >Submit !!!</button></form>
+          <button id='submitbutton' class='btn btn-default' type='button' style='margin-top:35%; margin-left:75%;' >Submit</button></form>
           </span></div><span id="AllInfo"></span>
            </div>
          </div>

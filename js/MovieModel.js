@@ -26,7 +26,6 @@ MarathonTime = '';
 			marathon.place = place;
 			marathon.date = date;
 			marathon.time = time;
-			console.log(marathon);
 			notifyObservers(marathon);
 	}
 
