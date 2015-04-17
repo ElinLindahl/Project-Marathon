@@ -10,7 +10,8 @@ var CreateNewView = function (container, Model) {
 		this.marathonDiv = function (){
 			all += "<h3>"+Marathon.name+"</h3>";
 			all += "<h5>@"+Marathon.place+" Date: "+Marathon.date+" Time: "+Marathon.time+"</h5>";
-			all += "<div id='dropDiv'></div>";
+			all += "<div id='dropDiv' ondrop='drop(event)' ondragover='allowDrop(event)'></div>";
+			all += "<button id='confirmbutton' class='btn btn-default' type='button' style='margin-top:5%; margin-left:83%;' >Confirm</button>"
 			this.marathonfield.html(all);
 		}
 
