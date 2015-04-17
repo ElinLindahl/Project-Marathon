@@ -15,13 +15,14 @@
 
 	<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
-  <script src="js/MovieModel.js"></script>
+ 	<script src="js/MovieModel.js"></script>
 	<script src="js/SearchView.js"></script>
-  <script src="js/SearchviewController.js"></script>
+  <script src="js/CreateNewViewController.js"></script>
+
+	<script src="js/CreateNewView.js"></script>
 	<!-- script src="js/MainController.js"></script>
   
 	
-	<script src="js/CreateNewView.js"></script>
 	<script src="js/MarathonListView.js"></script>
 	<script src="js/OverviewView.js"></script-->
 	
@@ -61,7 +62,7 @@
       <div class="row">
 			 <div class="col-md-4" id="SearchView">
   				<span id="search"></span>
-  				<p>Hej</p>	
+  				<p>Kolumn 1</p>	
   				<div class="input-group">
 	      		<input id="search" type="text" class="form-control" placeholder="Enter title or actor">
 	      		<span class="input-group-btn">
@@ -71,16 +72,40 @@
 	   		 	<div id="s">
             <h5>Sökresultat</h5><span class="movies"></span>
           </div>
-  		  </div>
+  		 </div>
+  		 
 
-	      <div class="col-md-4" id="MarathonListView">
-  				<span id="list"></span>
-  				<p>Hej</p>
+	      <div class="col-md-4" id="CreateNewView">
+
+			   
+			
+			<div id="s">
+        <div id="createField">
+        <h3>Create a new movie marathon:</h3></br></br>
+        <form id='Marathon'>
+          <p style='margin-left:3%'>Name:</p>
+          <input id='MarathonName' type='text' class='form-control' placeholder='Enter name of the marathon' style='margin-left:3%'></br>
+          <p style='margin-left:3%'>Place:</p><input id='Place' type='text' class='form-control'  style='margin-left:3%'></br>
+          <div class='col-xs-3'>
+          <p style='margin-left:3%'>Date:</p><input id='Date' type='text' class='form-control'>
+          <p style='margin-left:3%'>Time:</p><input id='Time' type='text' class='form-control'></div>
+          <div><span class='input-group-btn'>
+          <button id='submitbutton' class='btn btn-default' type='button' style='margin-top:35%; margin-left:75%;' >Submit !!!</button></form>
+          </span></div><span id="AllInfo"></span>
+           </div>
+         </div>
+        <div id="marathonField"></div>
+  		   		
   		  </div>
+  		  
   			
-  			<div class="col-md-4" id="CreateNewView">
-  				<span id="createNew"></span>
-  				<p>Hej</p>
+  			<div class="col-md-4" id="MarathonListView">
+  				<span id="MarathonList"></span>
+  				<p>Kolumn 3</p>
+  				
+  				
+  				
+  				
   			</div>
 		
 		  </div>

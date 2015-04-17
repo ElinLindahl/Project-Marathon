@@ -3,9 +3,6 @@ var SearchView = function (container, Model) {
 	str = '';
 	box = '';
 
-	var infobox = function(id) {
-		console.log(id);
-	}
 
 	this.update = function(obj){
 		if (obj){

@@ -41,6 +41,9 @@ table.padded td {
 	background-color:rgba(226,255,247,0.85);
 }
 
+#marathonField {
+	display:none;
+}
 
 #row{
 	font-size: 45pt; 

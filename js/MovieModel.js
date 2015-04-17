@@ -1,6 +1,10 @@
 var MovieModel = function() {
 observerlist = [];
 serchList = [];
+MarathonName = '';
+MarathonPlace = '';
+MarathonDate = '';
+MarathonTime = '';
 
 	this.addObserver = function(observer) {
 		observerlist.push(observer);
@@ -11,6 +15,21 @@ serchList = [];
 			observerlist[i].update(obj);
 		}
 	} 
+
+	this.notify = function(obj) {
+		notifyObservers(obj);
+	}
+	//Creates a new marathon-object
+	this.createMarathon = function (name, place, date, time) {
+		var marathon = new Object();
+			marathon.name = name;
+			marathon.place = place;
+			marathon.date = date;
+			marathon.time = time;
+			console.log(marathon);
+			notifyObservers(marathon);
+	}
+
 	
 	//Movie by title
 	this.getmovie = function (query) {
