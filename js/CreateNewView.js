@@ -3,6 +3,8 @@ var CreateNewView = function (container, Model) {
 	this.createfield = container.find("#createField");
 	this.marathonfield = container.find("#marathonField");
 	var all ='';
+
+
 	this.update = function(obj){
 		if (obj){
 			Marathon = obj;
