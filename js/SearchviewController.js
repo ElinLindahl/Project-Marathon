@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 var SearchViewController = function(view, model ) {
 
 
@@ -9,3 +10,18 @@ var SearchViewController = function(view, model ) {
 	}
 	this.refresh();
 }
+=======
+var SearchviewController = function(view, model){
+
+console.log("hejsan");
+
+view.searchbutton.click(function(){
+	model.searchstr= $("#search").val();
+	console.log(model.searchstr);
+	model.getmovie(model.searchstr);
+	notifyObservers();
+
+});
+
+}
+>>>>>>> Stashed changes

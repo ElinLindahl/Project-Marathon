@@ -1,3 +1,5 @@
+searchstr = '';
+
 var MovieModel = function() {
 observerlist = [];
 serchList = [];
