@@ -55,6 +55,11 @@ h3.h3styled{
 	padding: 10px;
 	margin-bottom: 5px;
 	border: 1px solid #C1E0FF;
+
+}
+#dropdiv{
+	height:90%;
+
 }
 
 #searchf {
