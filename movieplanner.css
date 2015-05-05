@@ -17,6 +17,14 @@ h2 {
 
 }
 
+li {
+    list-style-type: none;
+
+}
+
+img{
+	height:100px;
+}
 table.padded td { 
 	padding:10px 0px 0px 10px; 
 }
@@ -115,3 +123,12 @@ input#MarathonName, input#Place {
 .round-button:hover {
     background: rgba(70,80,226,0.85);
 }
+
+#Time{
+	width: 120px;
+}
+#Date{
+	width: 120px;
+}
+
+

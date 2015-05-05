@@ -67,7 +67,7 @@
 	        	</span>
 	   		 	</div>
 	   		 	<div id="searchf">
-            <span class="movies"></span>
+            <div class="movies" ondrop='drop(event)' ondragover='allowDrop(event)'></div>
           </div>
   		 </div>
   		 
@@ -84,8 +84,8 @@
           <input id='MarathonName' type='text' class='form-control' placeholder='Enter name' style='margin-left:3%'></br>
           <input id='Place' type='text' class='form-control' style='margin-left:3%' placeholder='Enter place'></br>
           <div class='col-xs-3'>
-          <p> <input id='Date' type='text' class='form-control'placeholder='Date'></p>
-        <input id='Time' type='text' class='form-control' placeholder='Time'></div>
+          <p> <input id='Date' type='text' class='form-control'placeholder='Date "dd/mm"'></p>
+        <input id='Time' type='time' class='form-control' placeholder='Time'></div>
           <div><span class='input-group-btn'>
           <button id='submitbutton' class='btn btn-default' type='button' style='margin-top:35%; margin-left:75%;' >Submit</button></form></div>
           </span></div><span id="AllInfo"></span>

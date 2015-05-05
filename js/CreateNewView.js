@@ -9,11 +9,13 @@ var CreateNewView = function (container, Model) {
 		if (obj){
 			Marathon = obj;
 		};
+
 		this.marathonDiv = function (){
 			all += "<h3>"+Marathon.name+"</h3>";
 			all += "<h5>@"+Marathon.place+" Date: "+Marathon.date+" Time: "+Marathon.time+"</h5>";
 			all += "<div id='dropDiv' ondrop='drop(event)' ondragover='allowDrop(event)'></div>";
-			all += "<button id='confirmbutton' class='btn btn-default' type='button' style='margin-top:5%; margin-left:83%;' >Confirm</button>"
+			all +="<div id='rtime'>Watching time:"+ +"";
+			all += "<button id='confirmbutton' class='btn btn-default' type='button' style='margin-top:5%; margin-left:83%;' >Confirm</button></div>"
 			this.marathonfield.html(all);
 		}
 

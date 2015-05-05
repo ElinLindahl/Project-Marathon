@@ -1,20 +1,19 @@
- //Toggle descriptionbox for movies
- function showInfo(id) {
+//Toggle descriptionbox for movies
+function showInfo(id) {
     $("#description"+id).toggle(100);
- }
+}
 
  //Toggle make a marathon-form
- function showForm() {
+function showForm() {
     $("#Marathon").toggle(100);
- }
+}
 
- //Drag-function for movies
- function drag(ev){
+//Drag-function for movies
+function drag(ev){
     ev.dataTransfer.setData("text", ev.target.id);
+}
 
- }
-
- function drop(ev) {
+function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     console.log(data);
