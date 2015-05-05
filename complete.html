@@ -29,34 +29,22 @@
 	<!-- script src="js/MainController.js"></script>
   
 	
-
-	<!-- script src="js/MainController.js"></script> -->
-
-	<script src="js/SearchviewController.js"></script>
-	<!--
-	<script src="js/CreateNewView.js"></script>
-
 	<script src="js/MarathonListView.js"></script>
 	<script src="js/OverviewView.js"></script-->
-	
-	<script type="text/javascript">
-
-  </script>
 
 					    
-    <title>Movie Marathon Planner</title> 
+    <title>Movie Marathon Planner HEJ</title> 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> 
 
   </head>
-  <body>
-    
+  <body >
     <!-- START Start page --> 
     <div class="container-fluid" id="start-page">
       <div class="row" id="header">
         <div class="col-md-12">
-          <p id="headtitle"><h1>Movie Planner</h1>
+          <p id="headtitle"><h1 class="headtitle">Movie Planner</h1>
           <h3 class="h3styled"> Create your own movie marathon!</h3>
         </div>
       </div>
@@ -72,15 +60,14 @@
       <div class="row">
 			 <div class="col-md-4" id="SearchView">
   				<span id="search"></span>
-  				<p>Kolumn 1</p>	
   				<div class="input-group">
 	      		<input id="searchword" type="text" class="form-control" placeholder="Enter title or actor">
 	      		<span class="input-group-btn">
 	        	  <button id="searchbutton" class="btn btn-default" type="button">Search</button>
 	        	</span>
 	   		 	</div>
-	   		 	<div id="s">
-            <h5>Sökresultat</h5><span class="movies"></span>
+	   		 	<div id="searchf">
+            <span class="movies"></span>
           </div>
   		 </div>
   		 
@@ -91,16 +78,16 @@
 			
 			<div id="s">
         <div id="createField">
-        <h3 onclick='showForm()'>Create a new movie marathon:</h3></br></br>
-        <form id='Marathon'>
-          <p style='margin-left:3%'>Name:</p>
-          <input id='MarathonName' type='text' class='form-control' placeholder='Enter name of the marathon' style='margin-left:3%'></br>
-          <p style='margin-left:3%'>Place:</p><input id='Place' type='text' class='form-control'  style='margin-left:3%'></br>
+        <span onclick='showForm()' class="round-button">+</span></br></br>
+        <div id="Marathon">
+        <form>
+          <input id='MarathonName' type='text' class='form-control' placeholder='Enter name' style='margin-left:3%'></br>
+          <input id='Place' type='text' class='form-control' style='margin-left:3%' placeholder='Enter place'></br>
           <div class='col-xs-3'>
-          <p style='margin-left:3%'>Date:</p><input id='Date' type='text' class='form-control'>
-          <p style='margin-left:3%'>Time:</p><input id='Time' type='text' class='form-control'></div>
+          <p> <input id='Date' type='text' class='form-control'placeholder='Date'></p>
+        <input id='Time' type='text' class='form-control' placeholder='Time'></div>
           <div><span class='input-group-btn'>
-          <button id='submitbutton' class='btn btn-default' type='button' style='margin-top:35%; margin-left:75%;' >Submit</button></form>
+          <button id='submitbutton' class='btn btn-default' type='button' style='margin-top:35%; margin-left:75%;' >Submit</button></form></div>
           </span></div><span id="AllInfo"></span>
            </div>
          </div>

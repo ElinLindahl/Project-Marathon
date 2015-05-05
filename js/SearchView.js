@@ -1,14 +1,9 @@
 var SearchView = function (container, Model) {
-<<<<<<< Updated upstream
 	
 	this.searchbutton = container.find("#searchbutton");
 	this.AllMovies = container.find(".movies");
 	
 	box = '';
-=======
-	this.AllMovies = container.find("#movies");
-	this.searchbutton = container.find("#searchbutton");
->>>>>>> Stashed changes
 
 	this.update = function(obj){
 		str = '';
@@ -39,10 +34,4 @@ var SearchView = function (container, Model) {
 	Model.addObserver(this);
 //	Model.getmovie("Star wars");
 
-<<<<<<< Updated upstream
 }
-=======
-	//Model.getmovie("The Note Book");
-
-}
->>>>>>> Stashed changes

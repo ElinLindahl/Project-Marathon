@@ -8,6 +8,10 @@ h1 {
 	text-transform: uppercase; 
 }
 
+h1.headtitle {
+	color:rgba(255,255,255,1);
+}
+
 h2 {
 	margin-left: 10px;
 
@@ -23,8 +27,11 @@ table.padded td {
 	border:solid 1px #ccc;
 }
 
-.h3styled{
-	margin-left: 10px;
+h3.h3styled{
+	margin-left: 20px;
+	font-size: 20px;
+	font-style: italic;
+	color:rgba(255,255,255,1);
 	display: inline;
 }
 
@@ -42,17 +49,36 @@ table.padded td {
 	border: 1px solid #C1E0FF;
 }
 
+#searchf {
+	margin-top:10px;
+}
+
+.item:nth-child(odd) .movie {
+    background-color: red;
+}
+
 #header {
 	padding:2%;
-	background-color:rgba(226,255,247,0.85);
+	background-color:rgba(92,137,226,0.85);
 }
 
 #marathonField {
 	display:none;
+	margin-top: 0px;
 }
+
+input#MarathonName, input#Place {
+	width:350px;
+	border: none;
+}
+
 
 #Marathon {
 	display:none;
+	padding:15px 10px 15px 0px;
+	border: 2px solid #f5f5f5;
+    border-radius: 5%;
+    background-color:rgba(92,137,226,0.85);
 }
 
 #row{
@@ -61,18 +87,31 @@ table.padded td {
 	background-color: #FF8C7A; 
 	margin-left: 10%;
 }
+
 #searchView{
 	border-right: solid;
 	border-color: #000000;
-
 }
 #marathonListView{
 	border-right: solid;
 	border-color: #000000;
-
 }
 
-
-
-
-
+.round-button {
+    display:block;
+    width:30px;
+    height:30px;
+    line-height:24px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: rgba(92,137,226,0.85);
+    box-shadow: 0 0 3px gray;
+    font-size:15px;
+    cursor: pointer;
+}
+.round-button:hover {
+    background: rgba(70,80,226,0.85);
+}
