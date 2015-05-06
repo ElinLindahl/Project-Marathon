@@ -8,6 +8,7 @@ function showForm() {
     $("#Marathon").toggle(100);
 }
 
+
 //Drag-function for movies
 function drag(ev){
     ev.dataTransfer.setData("text", ev.target.id);
@@ -30,7 +31,6 @@ function dropback(ev){
     chosenList.splice(index,1);
     console.log(chosenList);
 }
-
 //Date-picker function
 $(function() {
     $( "#datepicker" ).datepicker();
