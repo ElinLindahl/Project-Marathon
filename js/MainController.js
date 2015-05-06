@@ -8,18 +8,37 @@ function showForm() {
     $("#Marathon").toggle(100);
 }
 
-//Drag-function for movies
-function drag(ev){
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+//Date-picker function
+$(function() {
+    $( "#datepicker" ).datepicker();
+  });
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    console.log(data);
-    ev.target.appendChild(document.getElementById(data));
-}
+//Autocomplete function
+    $(function() {
+      $("#searchword").autocomplete({
+        //minLength and delay to prevent a large amout of calls
+        minLength: 3,
+        delay: 500,
 
+        source: function(query, result) {
+          $.getJSON("http://api.rottentomatoes.com/api/public/v1.0/movies.json?callback=?", {
+            apikey: "tmaras95gturfua7r8tdvrym",
+            q: query.term,
+            page_limit: 10
+          }, function(data) {
+            // data is an array of objects and must be transformed for autocomplete to use
+            var array = data.error ? [] : $.map(data.movies, function(m) {
+              return {
+                label: m.title + " (" + m.year + ")",
+                url: m.links.alternate
+              };
+            });
+            result(array);
+          });
+        },
+      });
+    });
+    
 function allowDrop(ev) {
     ev.preventDefault();
 }

@@ -5,7 +5,7 @@ var CreateNewViewController = function(view, model) {
 view.submitbutton.click(function(){
 	 	model.MarathonName = $("#MarathonName").val();
 	 	model.MarathonPlace = $("#Place").val();
-	 	model.MarathonDate = $("#Date").val();
+	 	model.MarathonDate = $("#datepicker").val();
 	 	model.MarathonTime = $("#Time").val();
 	 	model.createMarathon(model.MarathonName,model.MarathonPlace,model.MarathonDate,model.MarathonTime);
 	 	view.createfield.hide();

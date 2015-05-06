@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="movieplanner.css">
-    <link rel="stylesheet" type="text/css" href="movieplanner.css">
+    <link href="jquery-ui.css" rel="stylesheet">
 
 
     <!-- jQuery -->
@@ -25,6 +25,8 @@
     <script src="js/SearchViewController.js"></script>
     <script src="js/MarathonListViewController.js"></script>
 
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
 	
 	<!-- script src="js/MainController.js"></script>
   
@@ -35,6 +37,8 @@
 					    
     <title>Movie Marathon Planner HEJ</title> 
 
+
+ 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> 
 
@@ -61,7 +65,8 @@
 			 <div class="col-md-4" id="SearchView">
   				<span id="search"></span>
   				<div class="input-group">
-	      		<input id="searchword" type="text" class="form-control" placeholder="Enter title or actor">
+
+	      		<input id="searchword" type="text" class="form-control" placeholder="Enter movie title">
 	      		<span class="input-group-btn">
 	        	  <button id="searchbutton" class="btn btn-default" type="button">Search</button>
 	        	</span>
@@ -84,7 +89,7 @@
           <input id='MarathonName' type='text' class='form-control' placeholder='Enter name' style='margin-left:3%'></br>
           <input id='Place' type='text' class='form-control' style='margin-left:3%' placeholder='Enter place'></br>
           <div class='col-xs-3'>
-          <p> <input id='Date' type='text' class='form-control'placeholder='Date "dd/mm"'></p>
+          <p> <input id='datepicker' type='text' class='form-control'placeholder='Date "dd/mm"'></p>
         <input id='Time' type='time' class='form-control' placeholder='Time'></div>
           <div><span class='input-group-btn'>
           <button id='submitbutton' class='btn btn-default' type='button' style='margin-top:35%; margin-left:75%;' >Submit</button></form></div>
