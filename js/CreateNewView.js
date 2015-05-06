@@ -2,6 +2,7 @@ var CreateNewView = function (container, Model) {
 	this.submitbutton = container.find("#submitbutton");
 	this.createfield = container.find("#createField");
 	this.marathonfield = container.find("#marathonField");
+	this.chosenMovies = container.find("#chosenMovieList")
 	var all ='';
 
 
@@ -9,6 +10,7 @@ var CreateNewView = function (container, Model) {
 		if (obj){
 			Marathon = obj;
 		};
+		
 
 		this.marathonDiv = function (){
 			all += "<h3>"+Marathon.name+"</h3>";
@@ -17,8 +19,8 @@ var CreateNewView = function (container, Model) {
 			all +="<div id='rtime'>Watching time:"+ +"";
 			all += "<button id='confirmbutton' class='btn btn-default' type='button' style='margin-top:5%; margin-left:83%;' >Confirm</button></div>"
 			this.marathonfield.html(all);
+			
 		}
-
 		
 	}
 	this.update();

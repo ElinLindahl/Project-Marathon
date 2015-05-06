@@ -16,13 +16,62 @@ function drag(ev){
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    console.log(data);
     ev.target.appendChild(document.getElementById(data));
+    chosenList.push(data);
+    console.log(chosenList);
+
+}
+function dropback(ev){
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    
+    var index=chosenList.indexOf(data);
+    chosenList.splice(index,1);
+    console.log(chosenList);
 }
 
+//Date-picker function
+$(function() {
+    $( "#datepicker" ).datepicker();
+  });
+
+//Autocomplete function
+    $(function() {
+      $("#searchword").autocomplete({
+        //minLength and delay to prevent a large amout of calls
+        minLength: 3,
+        delay: 500,
+
+        source: function(query, result) {
+          $.getJSON("http://api.rottentomatoes.com/api/public/v1.0/movies.json?callback=?", {
+            apikey: "tmaras95gturfua7r8tdvrym",
+            q: query.term,
+            page_limit: 10
+          }, function(data) {
+            // data is an array of objects and must be transformed for autocomplete to use
+            var array = data.error ? [] : $.map(data.movies, function(m) {
+              return {
+                label: m.title + " (" + m.year + ")",
+                url: m.links.alternate
+              };
+            });
+            result(array);
+          });
+        },
+      });
+    });
+    
 function allowDrop(ev) {
     ev.preventDefault();
 }
+function allowNewPlace(ev){
+	ev.preventDefault();
+
+}
+
+
+
 
 var MainController = function(model) {
 	

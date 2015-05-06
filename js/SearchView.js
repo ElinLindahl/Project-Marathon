@@ -12,8 +12,10 @@ var SearchView = function (container, Model) {
 		if (obj){
 			Movies = obj;
 			for(i = 0; i < Movies.length; i++){
-				str += "<li class='moviebox'><div class='movie' id='m"+i+"' onclick='showInfo("+Movies[i].id+")' draggable='true' ondragstart='drag(event)'>";
+				str += "<li class='moviebox'><div class='movie' id="+Movies[i].id+" onclick='showInfo("+Movies[i].id+")' draggable='true' ondragstart='drag(event)'>";
 				str += "<img src='"+Movies[i].posters.thumbnail+"'></br><h5>"+Movies[i].title +"</h5>";
+				str += "<li class='moviebox'><div class='movie' id='m"+i+"' onclick='showInfo("+Movies[i].id+")' draggable='true' ondragstart='drag(event)'>";
+				str += "<h5>"+Movies[i].title +"</h5>";
 				str += "<div id='description"+Movies[i].id+"' class='desc'><table class='padded'><tr><td><p> Runtime: "+Movies[i].runtime+" min </br> Year: "+Movies[i].year+"</br>Audience rating: "+Movies[i].ratings.audience_score+"/100</br>Critics rating: "+Movies[i].ratings.critics_score+"/100</p></td></tr></table></div>";
 				str += "</div></li>";
 			}	

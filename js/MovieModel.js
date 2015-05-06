@@ -1,10 +1,13 @@
 var MovieModel = function() {
 observerlist = [];
 serchList = [];
+chosenList = [];
+movObjList = []; 
 MarathonName = '';
 MarathonPlace = '';
 MarathonDate = '';
 MarathonTime = '';
+
 
 	this.addObserver = function(observer) {
 		observerlist.push(observer);
@@ -67,5 +70,15 @@ MarathonTime = '';
 		// 	});
 
 		// }
+	}
+
+	this.showMovies = function(){
+
+		for(i in chosenList){
+			m = Model.getmovie(i);
+			movObjList.push(m);
+		}
+		console.log(movObjList);
+		
 	}
 }

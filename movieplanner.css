@@ -25,6 +25,12 @@ li {
 img{
 	height:100px;
 }
+
+.column.over {
+  border: 2px dashed #000;
+}
+
+
 table.padded td { 
 	padding:10px 0px 0px 10px; 
 }
