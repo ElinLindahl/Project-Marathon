@@ -6,10 +6,11 @@ view.submitbutton.click(function(){
 	 	model.MarathonName = $("#MarathonName").val();
 	 	model.MarathonPlace = $("#Place").val();
 	 	model.MarathonDate = $("#datepicker").val();
-	 	model.MarathonTime = $("#Time").val();
+	 	model.MarathonTime = $("#sel1").val();
 	 	model.createMarathon(model.MarathonName,model.MarathonPlace,model.MarathonDate,model.MarathonTime);
 	 	view.createfield.hide();
 	 	view.marathonfield.show();
+	 	$("#confirmbutton").show();
 	 	view.marathonDiv();
 	 	model.getmovie ($("#searchword").val()); //Gör att filmerna i searschview stannar kvar
 	 });
@@ -24,13 +25,16 @@ view.deletebutton.click(function(){
 });
 
 this.refresh = function(){
+
 	view.confirmbutton.click(function(){
-	 	$("marathonfield").hide();
-	 	$("SearchView").hide();
-	 	$("OverviewView").show();
-	
+		str = model.getMarathonList();
+		console.log(str);
+	 	$("#marathonfield").hide();
+	 	$("#SearchView").hide();
+	 	$("#confirmbutton").hide();
+	 	$("#marathonField").hide();
+	 	$("#OverviewView").show();	
 	 });
-}
 
 
 

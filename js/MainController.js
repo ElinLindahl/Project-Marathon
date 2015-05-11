@@ -19,7 +19,20 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
+
     $("#deletebutton"+data+"").show();
+
+    for(i in tempMovies) {
+      for(j in chosenList){
+       if(encodeURI(tempMovies[i].title) == chosenList[j]) {
+          finalList.push(tempMovies[i]);
+          chosenList.splice(chosenList[j],1);
+       }
+    }
+  }
+    console.log(data);
+    console.log(finalList);
+    model.showMovies();
     console.log(chosenList);
 
 }
@@ -33,6 +46,7 @@ function drop(ev) {
 //     chosenList.splice(index,1);
 //     console.log(chosenList);
 // }
+
 //Date-picker function
 $(function() {
     $( "#datepicker" ).datepicker();

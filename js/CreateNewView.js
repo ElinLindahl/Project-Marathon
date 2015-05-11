@@ -3,7 +3,6 @@ var CreateNewView = function (container, Model) {
 	this.createfield = container.find("#createField");
 	this.marathonfield = container.find("#marathonField");
 	this.chosenMovies = container.find("#chosenMovieList");
-	this.deletebutton = container.find("#deletebutton");
 	var all ='';
 
 
@@ -23,7 +22,9 @@ var CreateNewView = function (container, Model) {
 			this.chosenMovies.html(movObjList);
 		}
 	
-	this.confirmbutton = container.find("#confirmbutton");	
+	this.confirmbutton = container.find("#confirmbutton");
+	this.deletebutton = container.find("#deletebutton");
+	
 	}
 	this.update();
 	Model.addObserver(this);
