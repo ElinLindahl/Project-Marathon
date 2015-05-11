@@ -14,37 +14,35 @@ function drag(ev){
     ev.dataTransfer.setData("text", ev.target.id);
 }
 
+
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
-<<<<<<< HEAD
+    console.log(data);
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
           finalList.push(tempMovies[i]);
           chosenList.splice(chosenList[j],1);
+          console.log(tempMovies[i].title);
+          $("#deletebutton"+encodeURI(tempMovies[i].title)+"").show();
        }
     }
   }
-    console.log(data);
-    console.log(finalList);
-=======
-    model.showMovies();
-    console.log(chosenList);
-
->>>>>>> origin/master
 }
+// function dropback(ev){
+// 	ev.preventDefault();
+// 	var data = ev.dataTransfer.getData("text");
+  
+//   ev.target.appendChild(document.getElementById(data));
+    
+//     var index=chosenList.indexOf(data);
+//     chosenList.splice(index,1);
+//     console.log(chosenList);
+// }
 
-function dropback(ev){
-  	ev.preventDefault();
-  	var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));    
-    var index=chosenList.indexOf(data);
-    chosenList.splice(index,1);
-    console.log(chosenList);
-}
 //Date-picker function
 $(function() {
     $( "#datepicker" ).datepicker();
@@ -85,9 +83,10 @@ function allowNewPlace(ev){
 }
 
 
-
-
 var MainController = function(model) {
+
+model.notify(finalList);
+console.log(finalList);
 	
 var Searchview = new Searchview($("#Searchview"),model);
 window.SearchviewController = new SearchviewController(Searchview,model);

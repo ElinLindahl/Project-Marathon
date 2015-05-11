@@ -12,6 +12,18 @@ h1 {
 	display:none;
 }
 
+#SearchView {
+	display:none;
+}
+
+#CreateNewView {
+	display:none;
+}
+
+#header {
+	display:none;
+}
+
 #confirmbutton {
 	display:none;
 }
@@ -25,6 +37,10 @@ h2 {
 
 }
 
+h5 {
+	display:inline;
+}
+
 li {
     list-style-type: none;
 
@@ -32,6 +48,14 @@ li {
 
 img{
 	height:100px;
+}
+
+#pic{ 
+  background: url(images/kikare.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .column.over {
@@ -174,8 +198,10 @@ top:1px;
 
 
 .round-button {
-    display:block;
-    width:300px;
+   	position:relative;
+  	float:right;
+    display:inline;
+    width:30px;
     height:30px;
     line-height:24px;
     border: 2px solid #f5f5f5;
@@ -185,16 +211,19 @@ top:1px;
     box-shadow: 0 0 3px gray;
     font-size:15px;
     cursor: pointer;
+    display: none;
+
+
 }
 .round-button:hover {
     background: rgba(70,80,226,0.85);
 }
 
 #Time{
-	width: 120px;
+	width: 70px;
 }
-#Date{
-	width: 120px;
+#datepicker{
+	width: 80px;
 }
 
 

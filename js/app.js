@@ -18,6 +18,6 @@ $(function() {
 	
 	
 	//And create the needed controllers and views
-//	var MainController = new MainController(Model);
+	//	var MainController = new MainController(Model);
 	
 });

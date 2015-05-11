@@ -16,17 +16,27 @@ view.submitbutton.click(function(){
 	 });
 
 
+view.deletebutton.click(function(){
+		console.log("tabort");
+		var index = chosenList.indexOf(data);
+	    chosenList.splice(index,1);
+	    console.log(chosenList);
+
+});
+
+this.refresh = function(){
+
 	view.confirmbutton.click(function(){
-		str = model.getMarathonList();
-		console.log(str);
 	 	$("#marathonfield").hide();
 	 	$("#SearchView").hide();
 	 	$("#confirmbutton").hide();
 	 	$("#marathonField").hide();
 	 	$("#OverviewView").show();	
+	 	model.notify();
 	 });
 
 
 
 
+}
 }

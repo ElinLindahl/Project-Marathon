@@ -1,18 +1,21 @@
 var OverviewView = function (container, Model) {
-	this.overview = container.find("#OverviewView");
+	this.test = container.find("#otest");
+	
+	str = '';
+	this.update = function() {
+		finlist = finalList;
+		for(i = 0; i < finlist.length; i++){
+			str += "<li class='moviebox'>";
+			str +=	"<h3>"+finlist[i].title;"</h3>";
 
-	this.refresh = function (){
-	list = Model.finalList;
-	console.log(list);
-	str= 'HEEEJ';
-	if(list) {
-		for(i = 0; i < list.length; i++){
-			str += list[i].title;
-		}	
-		this.overview.html(str);
+			str += "<table class='padded'><tr><td><img src='"+Movies[i].posters.thumbnail+"'></td><td><p> Runtime: "+Movies[i].runtime+" min </br> Year: "+Movies[i].year+"</br>Audience rating: "+Movies[i].ratings.audience_score+"/100</br>Critics rating: "+Movies[i].ratings.critics_score+"/100</p></td></tr><tr><td colspan='2'><p class='small'>"+Movies[i].synopsis+"</p></td></tr></table>";
+			str += "</li>";
 		}
+		this.test.html(str);
 	}
-	this.refresh();
+	this.update();
+	Model.addObserver(this);
+
 }
-		
+
 
