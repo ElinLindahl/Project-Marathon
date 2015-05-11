@@ -12,13 +12,21 @@ h1 {
 	text-transform: uppercase; 
 }
 
+<<<<<<< HEAD
 #inlin {
 	display: inline;
+=======
+h4 {
+	margin-left: 0px;
+	display: inline;
+	font-family: Serif;
+>>>>>>> origin/master
 }
 
 #OverviewView {
 	display:none;
 }
+<<<<<<< HEAD
 
 #confirmbutton {
 	display:none;
@@ -26,7 +34,42 @@ h1 {
 
 #StartView{
 	display: none;
+=======
+
+
+#confirmbutton {
+	display:none;
+
 }
+
+#header {
+	display:none;
+>>>>>>> origin/master
+}
+
+#SearchView {
+	display:none;
+}
+
+#CreateNewView {
+	display:none;
+}
+
+#confirmbutton {
+	display:none;
+
+}
+
+
+
+#pic{ 
+  background: url(images/kikare.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 h1.headtitle {
 	color: white;
@@ -57,6 +100,14 @@ h2 {
 
 }
 
+<<<<<<< HEAD
+=======
+h5 {
+	display:inline;
+
+}
+
+>>>>>>> origin/master
 li {
     list-style-type: none;
 

@@ -3,6 +3,9 @@ var CreateNewView = function (container, Model) {
 	this.createfield = container.find("#createField");
 	this.marathonfield = container.find("#marathonField");
 	this.chosenMovies = container.find("#chosenMovieList");
+	this.dropDiv=container.find("#dropDiv");	
+
+
 	var all ='';
 
 
@@ -19,8 +22,11 @@ var CreateNewView = function (container, Model) {
 			all +="<div id='rtime'>Watching time:"+ +"";
 			this.marathonfield.html(all);
 			this.chosenMovies.html(movObjList);
-		}
-	
+
+
+	}
+
+	this.dropDiv.html(str);
 	this.confirmbutton = container.find("#confirmbutton");
 	this.deletebutton = container.find("#deletebutton");
 	

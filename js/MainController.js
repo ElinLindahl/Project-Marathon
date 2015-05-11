@@ -20,20 +20,23 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
-    console.log(data);
+
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
+<<<<<<< HEAD
         //push result in temporary movielist so we can reach them
+=======
+          $("#deletebutton"+tempMovies[i].title.replace(/\s+/g, "")).show();
+>>>>>>> origin/master
           finalList.push(tempMovies[i]);
           chosenList.splice(chosenList[j],1);
-          console.log(tempMovies[i].title);
-          $("#deletebutton"+encodeURI(tempMovies[i].title)+"").show();
        }
+      }
     }
-  }
 
 }
+<<<<<<< HEAD
 
 function PrintElem(elem)
 {
@@ -59,6 +62,25 @@ function PrintPage(data)
 
     return true;
 }
+=======
+      function deleteMovie(ev){
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        var index = finalList.indexOf(data);
+        finalList.splice(index,1);
+        console.log(finalList);
+      }
+
+      // for(i in finalList){
+      //   $("#deletebutton"+finalList[i].title.replace(/\s+/g, "")).click(function(){
+      //     console.log("tabort");
+      //     var index = finalList.indexOf(data);
+      //     finalList.splice(index,1);
+      //     console.log(finalList);
+      //   });
+      // }
+>>>>>>> origin/master
 // function dropback(ev){
 // 	ev.preventDefault();
 // 	var data = ev.dataTransfer.getData("text");
@@ -117,7 +139,7 @@ var MainController = function(model) {
 model.notify(finalList);
 console.log(finalList);
 	
-var Searchview = new Searchview($("#Searchview"),model);
+var Searchview = new Searchview($("#SearchView"),model);
 window.SearchviewController = new SearchviewController(Searchview,model);
 
 var CreateNewView = new CreateNewView($("#CreateNewView"),model);

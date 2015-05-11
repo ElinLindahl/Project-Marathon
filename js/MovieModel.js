@@ -11,6 +11,7 @@ MarathonDate = '';
 MarathonTime = '';
 
 
+
 	this.addObserver = function(observer) {
 		observerlist.push(observer);
 	}
@@ -80,4 +81,26 @@ MarathonTime = '';
 		console.log(movObjList);
 		
 	}
+	
+	
+		this.getRuntime = function(finalList){
+			var time = 0
+			for (var i=0; i<finalList.length; i++){
+				//i=int(i);
+				time += finalList[i].runtime;
+			}
+		return time
+		}
+
+		
+		this.setEndtime = function(startTime, runTime){
+			var extraTime = 0;
+			var endTime = 0;
+			var x=startTime;
+			console.log(x);
+			extraTime = runTime/60;
+			endTime = startTime+extraTime;
+		return endTime
+		}
+	
 }
