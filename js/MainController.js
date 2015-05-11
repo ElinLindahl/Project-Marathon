@@ -107,7 +107,7 @@ var MainController = function(model) {
 model.notify(finalList);
 console.log(finalList);
 	
-var Searchview = new Searchview($("#Searchview"),model);
+var Searchview = new Searchview($("#SearchView"),model);
 window.SearchviewController = new SearchviewController(Searchview,model);
 
 var CreateNewView = new CreateNewView($("#CreateNewView"),model);

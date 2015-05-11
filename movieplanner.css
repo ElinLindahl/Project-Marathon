@@ -8,6 +8,12 @@ h1 {
 	text-transform: uppercase; 
 }
 
+h4 {
+	margin-left: 0px;
+	display: inline;
+	font-family: Serif;
+}
+
 #OverviewView {
 	display:none;
 }
@@ -20,7 +26,33 @@ h1 {
 #StartView {
 	display: none;
 
+#header {
+	display:none;
 }
+
+#SearchView {
+	display:none;
+}
+
+#CreateNewView {
+	display:none;
+}
+
+#confirmbutton {
+	display:none;
+
+}
+
+
+
+#pic{ 
+  background: url(images/kikare.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 h1.headtitle {
 	color:rgba(255,255,255,1);
@@ -33,6 +65,7 @@ h2 {
 
 h5 {
 	display:inline;
+
 }
 
 li {
