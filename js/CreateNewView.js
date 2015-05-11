@@ -20,7 +20,7 @@ var CreateNewView = function (container, Model) {
 			all +="<div id='rtime'>Watching time:"+ +"";
 			all += "</div>"
 			this.marathonfield.html(all);
-			
+			this.chosenMovies.html(movObjList);
 		}
 	}
 	this.update();

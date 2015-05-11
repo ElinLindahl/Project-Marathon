@@ -6,7 +6,7 @@ view.submitbutton.click(function(){
 	 	model.MarathonName = $("#MarathonName").val();
 	 	model.MarathonPlace = $("#Place").val();
 	 	model.MarathonDate = $("#datepicker").val();
-	 	model.MarathonTime = $("#Time").val();
+	 	model.MarathonTime = $("#sel1").val();
 	 	model.createMarathon(model.MarathonName,model.MarathonPlace,model.MarathonDate,model.MarathonTime);
 	 	view.createfield.hide();
 	 	view.marathonfield.show();

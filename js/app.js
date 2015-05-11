@@ -10,6 +10,7 @@ $(function() {
 
 
 
+	//var mainController = new MainController(Model);
 	var marathonListViewController = new MarathonListViewController(marathonListView, Model);
 	var searchViewController = new SearchViewController(searchView, Model);
 	var createNewViewController = new CreateNewViewController(createNewView, Model);

@@ -19,6 +19,7 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
+<<<<<<< HEAD
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
@@ -29,6 +30,11 @@ function drop(ev) {
   }
     console.log(data);
     console.log(finalList);
+=======
+    model.showMovies();
+    console.log(chosenList);
+
+>>>>>>> origin/master
 }
 
 function dropback(ev){
@@ -57,7 +63,7 @@ $(function() {
             q: query.term,
             page_limit: 10
           }, function(data) {
-            // Dvata is an array of objects and must be transformed for autocomplete to use
+            // Data is an array of objects and must be transformed for autocomplete to use
             var array = data.error ? [] : $.map(data.movies, function(m) {
               return {
                 label: m.title + " (" + m.year + ")",
