@@ -15,14 +15,14 @@ view.submitbutton.click(function(){
 	 });
 
 
-view.confirmbutton.click(function(){
-	 	view.marathonfield.hide();
-	 	view.SearchView.hide();
-	 	view.OverviewView.show();
-	 	
+this.refresh = function(){
+	view.confirmbutton.click(function(){
+	 	$("marathonfield").hide();
+	 	$("SearchView").hide();
+	 	$("OverviewView").show();
 	
 	 });
-
+}
 
 
 
