@@ -19,7 +19,7 @@ var CreateNewView = function (container, Model) {
 			all +="<div id='rtime'>Watching time:"+ +"";
 			all += "<button class='confirmbutton' type='submit' style='margin-top:5%; margin-left:83%;' >Confirm</button></div>"
 			this.marathonfield.html(all);
-			
+			this.chosenMovies.html(movObjList);
 		}
 	
 	this.confirmbutton = container.find("#confirmbutton");	
