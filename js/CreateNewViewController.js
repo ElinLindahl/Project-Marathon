@@ -24,7 +24,6 @@ view.deletebutton.click(function(){
 
 });
 
-this.refresh = function(){
 
 	view.confirmbutton.click(function(){
 	 	$("#marathonfield").hide();
@@ -38,5 +37,5 @@ this.refresh = function(){
 
 
 
-}
+
 }
