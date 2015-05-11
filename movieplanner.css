@@ -12,6 +12,18 @@ h1 {
 	display:none;
 }
 
+#SearchView {
+	display:none;
+}
+
+#CreateNewView {
+	display:none;
+}
+
+#header {
+	display:none;
+}
+
 #confirmbutton {
 	display:none;
 }
@@ -32,6 +44,14 @@ li {
 
 img{
 	height:100px;
+}
+
+#pic{ 
+  background: url(images/kikare.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .column.over {

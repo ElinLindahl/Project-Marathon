@@ -19,7 +19,6 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
-<<<<<<< HEAD
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
@@ -30,11 +29,9 @@ function drop(ev) {
   }
     console.log(data);
     console.log(finalList);
-=======
     model.showMovies();
     console.log(chosenList);
 
->>>>>>> origin/master
 }
 
 function dropback(ev){
