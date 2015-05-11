@@ -11,22 +11,19 @@ h1 {
 #OverviewView {
 	display:none;
 }
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
+
 
 #StartView {
 	display:none;
 }
 
->>>>>>> Stashed changes
-
 #confirmbutton {
 	display:none;
-=======
+}
+
 #StartView{
 	display: none;
->>>>>>> origin/master
+
 }
 
 h1.headtitle {
