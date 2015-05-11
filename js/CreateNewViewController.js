@@ -16,14 +16,6 @@ view.submitbutton.click(function(){
 	 });
 
 
-view.deletebutton.click(function(){
-		console.log("tabort");
-		var index = chosenList.indexOf(data);
-	    chosenList.splice(index,1);
-	    console.log(chosenList);
-
-});
-
 
 	view.confirmbutton.click(function(){
 	 	$("#marathonfield").hide();

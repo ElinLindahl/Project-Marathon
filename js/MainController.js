@@ -20,19 +20,35 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
-    console.log(data);
+
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
+          $("#deletebutton"+tempMovies[i].title.replace(/\s+/g, "")).show();
           finalList.push(tempMovies[i]);
           chosenList.splice(chosenList[j],1);
-          console.log(tempMovies[i].title);
-          $("#deletebutton"+encodeURI(tempMovies[i].title)+"").show();
        }
+      }
     }
-  }
 
 }
+      function deleteMovie(ev){
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        var index = finalList.indexOf(data);
+        finalList.splice(index,1);
+        console.log(finalList);
+      }
+
+      // for(i in finalList){
+      //   $("#deletebutton"+finalList[i].title.replace(/\s+/g, "")).click(function(){
+      //     console.log("tabort");
+      //     var index = finalList.indexOf(data);
+      //     finalList.splice(index,1);
+      //     console.log(finalList);
+      //   });
+      // }
 // function dropback(ev){
 // 	ev.preventDefault();
 // 	var data = ev.dataTransfer.getData("text");
