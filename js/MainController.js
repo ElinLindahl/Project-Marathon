@@ -49,7 +49,7 @@ $(function() {
             q: query.term,
             page_limit: 10
           }, function(data) {
-            // data is an array of objects and must be transformed for autocomplete to use
+            // Dvata is an array of objects and must be transformed for autocomplete to use
             var array = data.error ? [] : $.map(data.movies, function(m) {
               return {
                 label: m.title + " (" + m.year + ")",
