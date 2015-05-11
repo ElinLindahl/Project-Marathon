@@ -19,7 +19,6 @@ var CreateNewView = function (container, Model) {
 			all += "<h3 class='he'>"+Marathon.name+"</h3>";
 			all += "<h5 class='he'>Place: "+Marathon.place+" | Date: "+Marathon.date+" | Time: "+Marathon.time+"</h5></span>";
 			all += "<div id='dropDiv' ondrop='drop(event)' ondragover='allowDrop(event)'></div>";
-			all +="<div id='rtime'>Watching time:"+ +"";
 			this.marathonfield.html(all);
 			this.chosenMovies.html(movObjList);
 

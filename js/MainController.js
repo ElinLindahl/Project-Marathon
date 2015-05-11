@@ -24,11 +24,8 @@ function drop(ev) {
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
-<<<<<<< HEAD
         //push result in temporary movielist so we can reach them
-=======
           $("#deletebutton"+tempMovies[i].title.replace(/\s+/g, "")).show();
->>>>>>> origin/master
           finalList.push(tempMovies[i]);
           chosenList.splice(chosenList[j],1);
        }
@@ -36,7 +33,6 @@ function drop(ev) {
     }
 
 }
-<<<<<<< HEAD
 
 function PrintElem(elem)
 {
@@ -62,7 +58,7 @@ function PrintPage(data)
 
     return true;
 }
-=======
+
       function deleteMovie(ev){
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
@@ -80,7 +76,6 @@ function PrintPage(data)
       //     console.log(finalList);
       //   });
       // }
->>>>>>> origin/master
 // function dropback(ev){
 // 	ev.preventDefault();
 // 	var data = ev.dataTransfer.getData("text");
