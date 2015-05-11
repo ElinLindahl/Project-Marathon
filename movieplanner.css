@@ -11,14 +11,13 @@ h1 {
 #OverviewView {
 	display:none;
 }
-<<<<<<< HEAD
 
 #confirmbutton {
 	display:none;
-=======
+}
+
 #StartView{
 	display: none;
->>>>>>> origin/master
 }
 
 h1.headtitle {

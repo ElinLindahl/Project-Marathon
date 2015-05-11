@@ -3,6 +3,9 @@ var OverviewView = function (container, Model) {
 	
 	str = '';
 	this.update = function() {
+		
+		
+		
 		finlist = finalList;
 		for(i = 0; i < finlist.length; i++){
 			str += "<li class='moviebox'>";
@@ -11,6 +14,8 @@ var OverviewView = function (container, Model) {
 			str += "<table class='padded'><tr><td><img src='"+Movies[i].posters.thumbnail+"'></td><td><p> Runtime: "+Movies[i].runtime+" min </br> Year: "+Movies[i].year+"</br>Audience rating: "+Movies[i].ratings.audience_score+"/100</br>Critics rating: "+Movies[i].ratings.critics_score+"/100</p></td></tr><tr><td colspan='2'><p class='small'>"+Movies[i].synopsis+"</p></td></tr></table>";
 			str += "</li>";
 		}
+		var X=Model.getRuntime(finalList);
+		str+= "<h3>Total Runtime: " + X + " min</h3>";
 		this.test.html(str);
 	}
 	this.update();
