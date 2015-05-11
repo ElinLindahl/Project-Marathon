@@ -3,8 +3,6 @@ var SearchView = function (container, Model) {
 	this.searchbutton = container.find("#searchbutton");
 	this.AllMovies = container.find(".movies");
 	this.deletebutton = container.find("#deletebutton");
-
-
 	box = '';
 
 	this.update = function(obj){
