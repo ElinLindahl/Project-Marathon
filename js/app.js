@@ -14,7 +14,7 @@ $(function() {
 	var marathonListViewController = new MarathonListViewController(marathonListView, Model);
 	var searchViewController = new SearchViewController(searchView, Model);
 	var createNewViewController = new CreateNewViewController(createNewView, Model);
-	var overviewViewController = new OverviewViewController(OverviewView, Model);
+	var overviewViewController = new OverviewViewController(overviewView, Model);
 	
 	
 	//And create the needed controllers and views

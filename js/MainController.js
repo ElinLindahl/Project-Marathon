@@ -14,7 +14,7 @@ function drag(ev){
     ev.dataTransfer.setData("text", ev.target.id);
 }
 
-
+//Drop-function for movies
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
@@ -24,6 +24,7 @@ function drop(ev) {
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
+        //push result in temporary movielist so we can reach them
           finalList.push(tempMovies[i]);
           chosenList.splice(chosenList[j],1);
           console.log(tempMovies[i].title);
@@ -32,6 +33,31 @@ function drop(ev) {
     }
   }
 
+}
+
+function PrintElem(elem)
+{
+    PrintPage($(elem).html());
+}
+
+function PrintPage(data) 
+{
+    //Creates popup so that the user can have a look of how the print will be
+    var mywindow = window.open('', 'printable', 'height=600,width=800');
+    mywindow.document.write('<html><head><title>'+marathonTemp[0].name+'</title>');
+
+    mywindow.document.write('<link rel="stylesheet" type="text/css" href="printview.css"></head><body >');
+
+    mywindow.document.write("<button class='btn btn-default' type='button' onclick='window.print()'>OK!</button>");
+    mywindow.document.write("<div id='printheader'><h2>"+marathonTemp[0].name+"</h2><p>Where? "+marathonTemp[0].place+"</br>When? "+marathonTemp[0].date+ "</br> Time? "+marathonTemp[0].time+"</p></div>");
+    mywindow.document.write(data);
+    mywindow.document.write('<div id="notes">Your own notes</div>');
+    mywindow.document.write('</body></html>');
+
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10
+
+    return true;
 }
 // function dropback(ev){
 // 	ev.preventDefault();

@@ -4,6 +4,7 @@ serchList = [];
 chosenList = [];
 movObjList = []; 
 finalList = [];
+marathonTemp = [];
 MarathonName = '';
 MarathonPlace = '';
 MarathonDate = '';
@@ -17,6 +18,7 @@ MarathonTime = '';
 	var notifyObservers = function(obj) {
 		for(i in observerlist) {
 			observerlist[i].update(obj);
+			console.log(obj);
 		}
 	} 
 
@@ -30,6 +32,7 @@ MarathonTime = '';
 			marathon.place = place;
 			marathon.date = date;
 			marathon.time = time;
+			marathonTemp.push(marathon);
 			notifyObservers(marathon);
 	}
 

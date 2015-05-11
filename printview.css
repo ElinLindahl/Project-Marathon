@@ -1,0 +1,28 @@
+body {
+	font-family: helvetica,arial,sans-serif;
+}
+
+p.small {
+	font-size: 10pt;
+	line-height: 14pt;
+}
+
+#otest {
+	width:50%;
+	float: left;
+	border-right: solid 1px #cccccc;
+	padding-right:10px;
+}
+
+#notes {
+	width: 40%;
+	float: left;
+	padding-left:10px;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+#printheader {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #cccccc;
+}

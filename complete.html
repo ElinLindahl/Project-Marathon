@@ -44,15 +44,15 @@
  
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> 
-
   </head>
   <body >
     <!-- START Start page --> 
     <div class="container-fluid" id="start-page">
       <div class="row" id="header">
         <div class="col-md-12">
-          <p id="headtitle"><h1 class="headtitle">Movie Planner</h1>
-          <h3 class="h3styled"> Create your own movie marathon!</h3>
+          <div id="ruta"><h1 class="headtitle">Movie Marathon Creator</h1>
+          <h3 class="headundertitle"> Wow much movie marathon so amazing</h3>
+        </div>
         </div>
       </div>
       
@@ -105,17 +105,13 @@
         		<span onclick='showForm()' class="myButton">Create new marathon</span></br></br>
         		<div id="Marathon">
         			<form>
-          				<input id='MarathonName' type='text' class='form-control' placeholder='Enter name' style='margin-left:3%'></br>
+          				<input id='MarathonName' type='text' class='form-control' placeholder='Enter name' style='margin-left:3%'>
+                </br>
           				<input id='Place' type='text' class='form-control' style='margin-left:3%' placeholder='Enter place'></br>
           				<div class='col-xs-3'>
-          					<p> <input id='datepicker' type='text' class='form-control'placeholder='Date &#9652;'></p>
-        					<!---input id='Time' type='time' class='form-control' placeholder='Time'--->
-							
-							
-					  <form role="form">
-						<div class="form-group">
-						  <select class="form-control" id="sel1">
-							<option>Time</option>
+          				<p><input id='datepicker' type='text' class='form-control'placeholder='Date &#9652;'></p>
+						 <select class="form-control" id="sel1">
+							<option id="selected">Time</option>
 							<option>00.00</option>
 							<option>00.30</option>
 							<option>01.00</option>
@@ -165,8 +161,7 @@
 							<option>23.00</option>
 							<option>23.30</option>
 						  </select>
-						  </div>
-					  </form>
+              
 							
 							
         				</div>
@@ -187,8 +182,11 @@
   		</div>
   		  
   </div>
-  		<div id="OverviewView"><h2>Your marathon</h2>
-        <div id="otest"></div>
+  		<div id="OverviewView"><h2 style="color:white">Your marathon</h2>
+        <button id='backbutton' class='btn btn-default' type='button'>Go back and edit marathon</button>
+      <button id="printbutton" type="button" class='btn btn-default' onclick="PrintElem('#printable')">Print your marathon</button></br></br>
+       <div id="printable"> <div id="otest"></div></div>
+
   		</div>
 		
 	
