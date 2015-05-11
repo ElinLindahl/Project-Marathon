@@ -49,6 +49,8 @@ $(function() {
     $( "#datepicker" ).datepicker();
   });
 
+
+
 //Autocomplete function
     $(function() {
       $("#searchword").autocomplete({
