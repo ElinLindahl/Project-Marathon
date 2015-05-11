@@ -8,6 +8,14 @@ h1 {
 	text-transform: uppercase; 
 }
 
+#OverviewView {
+	display:none;
+}
+
+#confirmbutton {
+	display:none;
+}
+
 h1.headtitle {
 	color:rgba(255,255,255,1);
 }

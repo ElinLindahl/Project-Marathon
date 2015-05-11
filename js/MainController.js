@@ -19,14 +19,22 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
-    console.log(chosenList);
-
+    for(i in tempMovies) {
+      for(j in chosenList){
+       if(encodeURI(tempMovies[i].title) == chosenList[j]) {
+          finalList.push(tempMovies[i]);
+          chosenList.splice(chosenList[j],1);
+       }
+    }
+  }
+    console.log(data);
+    console.log(finalList);
 }
+
 function dropback(ev){
-	ev.preventDefault();
-	var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-    
+  	ev.preventDefault();
+  	var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));    
     var index=chosenList.indexOf(data);
     chosenList.splice(index,1);
     console.log(chosenList);

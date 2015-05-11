@@ -3,6 +3,7 @@ observerlist = [];
 serchList = [];
 chosenList = [];
 movObjList = []; 
+finalList = [];
 MarathonName = '';
 MarathonPlace = '';
 MarathonDate = '';
@@ -35,7 +36,6 @@ MarathonTime = '';
 	
 	//Movie by title
 	this.getmovie = function (query) {
-	
 		var apikey = "tmaras95gturfua7r8tdvrym";
 		var baseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
 
@@ -49,31 +49,27 @@ MarathonTime = '';
 				dataType: "jsonp",
 				success: function (data) {
 	        		movies = data.movies;
-	        		console.log(movies);
 		 			notifyObservers(movies);
+		 			tempMovies = [];
+		 			for(i in movies){
+		 				tempMovies.push(movies[i]);
+		 			}
 		 		}
 			
 			});
 		});
-
-
-		// callback for when we get back the results
-		// function searchCallback(data) {
-		// 	$(document.body).append('Found ' + data.total + ' results for ' + query);
-		// 	var movies = data.movies;
- 	// 		console.log(movies);
- 		
-	 // 		$.each(movies, function(index, movie) {
-	 //   			$(document.body).append('<h5>' + movie.title + '</h5>');
-	 //   			$(document.body).append('<img src="' + movie.posters.thumbnail + '" />');
-	 //   			notifyObservers();
-		// 	});
-
-		// }
 	}
 
-	this.showMovies = function(){
+	this.getMarathonList = function () {
+		str=''
+		for(i in chosenList) {
+			str+= chosenList[i];
+		}
+		return str;
+	}
 
+
+	this.showMovies = function(){
 		for(i in chosenList){
 			m = Model.getmovie(i);
 			movObjList.push(m);
