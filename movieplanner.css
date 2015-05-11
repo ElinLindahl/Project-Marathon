@@ -11,7 +11,15 @@ h1 {
 #OverviewView {
 	display:none;
 }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+
+#StartView {
+	display:none;
+}
+
+>>>>>>> Stashed changes
 
 #confirmbutton {
 	display:none;
