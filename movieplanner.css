@@ -12,7 +12,15 @@ h1 {
 	display:none;
 }
 
-#StartView {
+#header {
+	display:none;
+}
+
+#SearchView {
+	display:none;
+}
+
+#CreateNewView {
 	display:none;
 }
 
@@ -20,10 +28,16 @@ h1 {
 	display:none;
 }
 
-#StartView{
-	display: none;
 
+
+#pic{ 
+  background: url(images/kikare.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 h1.headtitle {
 	color:rgba(255,255,255,1);
