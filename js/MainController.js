@@ -19,19 +19,20 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
-    model.showMovies();
+    $("#deletebutton"+data+"").show();
     console.log(chosenList);
 
 }
-function dropback(ev){
-	ev.preventDefault();
-	var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+// function dropback(ev){
+// 	ev.preventDefault();
+// 	var data = ev.dataTransfer.getData("text");
+  
+//   ev.target.appendChild(document.getElementById(data));
     
-    var index=chosenList.indexOf(data);
-    chosenList.splice(index,1);
-    console.log(chosenList);
-}
+//     var index=chosenList.indexOf(data);
+//     chosenList.splice(index,1);
+//     console.log(chosenList);
+// }
 //Date-picker function
 $(function() {
     $( "#datepicker" ).datepicker();

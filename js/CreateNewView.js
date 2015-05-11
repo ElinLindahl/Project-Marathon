@@ -2,7 +2,8 @@ var CreateNewView = function (container, Model) {
 	this.submitbutton = container.find("#submitbutton");
 	this.createfield = container.find("#createField");
 	this.marathonfield = container.find("#marathonField");
-	this.chosenMovies = container.find("#chosenMovieList")
+	this.chosenMovies = container.find("#chosenMovieList");
+	this.deletebutton = container.find("#deletebutton");
 	var all ='';
 
 
