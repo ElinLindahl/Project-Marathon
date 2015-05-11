@@ -220,10 +220,10 @@ top:1px;
 }
 
 #Time{
-	width: 120px;
+	width: 70px;
 }
-#Date{
-	width: 120px;
+#datepicker{
+	width: 80px;
 }
 
 
