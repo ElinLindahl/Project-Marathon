@@ -89,6 +89,15 @@ MarathonTime = '';
 		return time
 		}
 
-
+		
+		this.setEndtime = function(startTime, runTime){
+			var extraTime = 0;
+			var endTime = 0;
+			var x=startTime;
+			console.log(x);
+			extraTime = runTime/60;
+			endTime = startTime+extraTime;
+		return endTime
+		}
 	
 }
