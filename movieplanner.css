@@ -12,12 +12,17 @@ h1 {
 	display:none;
 }
 
+#StartView {
+	display:none;
+}
+
 #confirmbutton {
 	display:none;
 }
 
 #StartView{
 	display: none;
+
 }
 
 h1.headtitle {
