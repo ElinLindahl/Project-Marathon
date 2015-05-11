@@ -37,6 +37,10 @@ h2 {
 
 }
 
+h5 {
+	display:inline;
+}
+
 li {
     list-style-type: none;
 
@@ -194,8 +198,10 @@ top:1px;
 
 
 .round-button {
-    display:block;
-    width:300px;
+   	position:relative;
+  	float:right;
+    display:inline;
+    width:30px;
     height:30px;
     line-height:24px;
     border: 2px solid #f5f5f5;
@@ -205,6 +211,9 @@ top:1px;
     box-shadow: 0 0 3px gray;
     font-size:15px;
     cursor: pointer;
+    display: none;
+
+
 }
 .round-button:hover {
     background: rgba(70,80,226,0.85);

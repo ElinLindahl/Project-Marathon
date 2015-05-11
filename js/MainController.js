@@ -19,6 +19,12 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
+<<<<<<< HEAD
+=======
+
+    $("#deletebutton"+data+"").show();
+
+>>>>>>> origin/master
     for(i in tempMovies) {
       for(j in chosenList){
        if(encodeURI(tempMovies[i].title) == chosenList[j]) {
@@ -33,15 +39,17 @@ function drop(ev) {
     console.log(chosenList);
 
 }
+// function dropback(ev){
+// 	ev.preventDefault();
+// 	var data = ev.dataTransfer.getData("text");
+  
+//   ev.target.appendChild(document.getElementById(data));
+    
+//     var index=chosenList.indexOf(data);
+//     chosenList.splice(index,1);
+//     console.log(chosenList);
+// }
 
-function dropback(ev){
-  	ev.preventDefault();
-  	var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));    
-    var index=chosenList.indexOf(data);
-    chosenList.splice(index,1);
-    console.log(chosenList);
-}
 //Date-picker function
 $(function() {
     $( "#datepicker" ).datepicker();
