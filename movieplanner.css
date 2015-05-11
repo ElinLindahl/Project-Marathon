@@ -116,6 +116,11 @@ input#MarathonName, input#Place {
 	border-color: #000000;
 }
 
+.scrollable-menu{
+	height: auto;
+	max-height: 100px;
+	overflow-x: hidden;
+}
 
 .myButton {
 -moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
