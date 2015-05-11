@@ -11,21 +11,8 @@ h1 {
 #OverviewView {
 	display:none;
 }
-
-#SearchView {
-	display:none;
-}
-
-#CreateNewView {
-	display:none;
-}
-
-#header {
-	display:none;
-}
-
-#confirmbutton {
-	display:none;
+#StartView{
+	display: none;
 }
 
 h1.headtitle {
@@ -48,14 +35,6 @@ li {
 
 img{
 	height:100px;
-}
-
-#pic{ 
-  background: url(images/kikare.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 .column.over {
@@ -220,10 +199,10 @@ top:1px;
 }
 
 #Time{
-	width: 70px;
+	width: 80px;
 }
 #datepicker{
-	width: 80px;
+	width: 60px;
 }
 
 
