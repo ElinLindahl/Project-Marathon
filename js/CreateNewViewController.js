@@ -13,4 +13,18 @@ view.submitbutton.click(function(){
 	 	view.marathonDiv();
 	 	model.getmovie ($("#searchword").val()); //Gör att filmerna i searschview stannar kvar
 	 });
+
+
+view.confirmbutton.click(function(){
+	 	view.marathonfield.hide();
+	 	view.SearchView.hide();
+	 	view.OverviewView.show();
+	 	
+	
+	 });
+
+
+
+
+
 }
