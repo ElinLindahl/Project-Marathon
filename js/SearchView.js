@@ -33,6 +33,6 @@ var SearchView = function (container, Model) {
 	
 	
 	Model.addObserver(this);
-//	Model.getmovie("Star wars");
+
 
 }
