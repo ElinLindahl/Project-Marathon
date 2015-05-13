@@ -94,15 +94,21 @@ MarathonTime = '';
 
 		
 		this.setEndtime = function(startTime, runTime){
-			var extraTime = 0;
-			var endTime = 0;
-			var x=startTime;
-			console.log(x);
-			extraTime = runTime/60;
-			endTime = startTime+extraTime;
+			var time = startTime;
+			if (time!= null){
+				var dela = time.split('.');
+				var h = dela[0];
+				var min = dela[1];
+				var start = parseInt(h*60)+parseInt(min);
+				var endTime = "";
+				var totalTime = start + runTime;
+				var hours = parseInt(totalTime/60);
+				var minutes = totalTime % 60;
+				endTime = hours + "." + minutes;
 		return endTime
+			}
 		}
-		
+
 		
 	
 }

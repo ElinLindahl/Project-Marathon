@@ -21,7 +21,7 @@ var OverviewView = function (container, Model) {
 		var ET=Model.setEndtime(Model.MarathonTime, RT);
 
 
-		str+= "<h3>Total Runtime: " + hours + " h and " + minutes + " min </h3>";//+ ET +"!";
+		str+= "<h3>Total Runtime: " + hours + " h and " + minutes + " min and your marathon will end at = " + ET + "</h3>";//+ ET +"!";
 		this.test.html(str);
 	}
 	this.update();
