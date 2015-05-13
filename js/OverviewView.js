@@ -15,10 +15,13 @@ var OverviewView = function (container, Model) {
 		}
 		var RT=Model.getRuntime(finalList);
 		
+		var hours = parseInt(RT/60);
+		var minutes = RT % 60;
+		
 		var ET=Model.setEndtime(Model.MarathonTime, RT);
 
 
-		str+= "<h3>Total Runtime: " + RT + " min </h3>";//+ ET +"!";
+		str+= "<h3>Total Runtime: " + hours + " h and " + minutes + " min </h3>";//+ ET +"!";
 		this.test.html(str);
 	}
 	this.update();
