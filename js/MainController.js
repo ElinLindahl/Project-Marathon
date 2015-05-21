@@ -8,6 +8,14 @@ function showForm() {
     $("#Marathon").toggle(100);
 }
 
+function deleteMovie(id){
+  for(i in finalList) {
+    if(finalList[i].id == id) {
+      document.getElementById(encodeURI(finalList[i].title)).style.display = 'none';
+      finalList.splice(i,1);
+    }
+  }
+}
 
 //Drag-function for movies
 function drag(ev){
@@ -20,19 +28,27 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
     chosenList.push(data);
-
+    console.log(chosenList);
     for(i in tempMovies) {
       for(j in chosenList){
-       if(encodeURI(tempMovies[i].title) == chosenList[j]) {
-        //push result in temporary movielist so we can reach them
-          $("#deletebutton"+tempMovies[i].title.replace(/\s+/g, "")).show();
-          finalList.push(tempMovies[i]);
-          chosenList.splice(chosenList[j],1);
-       }
+         if(encodeURI(tempMovies[i].title) == chosenList[j]) {
+          //push result in temporary movielist so we can reach them
+            $("#deletebutton"+tempMovies[i].id).show();
+            finalList.push(tempMovies[i]);
+            finalList = deletedub(finalList);
+            chosenList.splice(j,1);
       }
     }
-
+    }
 }
+
+function deletedub(arr) {
+    var r = [];
+    $.each(arr, function(i, e) {
+        if ($.inArray(e, r) == -1) r.push(e);
+    });
+    return r;
+} 
 
 function PrintElem(elem)
 {
@@ -59,14 +75,6 @@ function PrintPage(data)
     return true;
 }
 
-      function deleteMovie(ev){
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-        var index = finalList.indexOf(data);
-        finalList.splice(index,1);
-        console.log(finalList);
-      }
 
       // for(i in finalList){
       //   $("#deletebutton"+finalList[i].title.replace(/\s+/g, "")).click(function(){

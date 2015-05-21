@@ -1,11 +1,11 @@
 var OverviewView = function (container, Model) {
 	this.test = container.find("#otest");
 	this.backbutton = container.find("#backbutton");
-	
+
+
+ 
 	str = '';
 	this.update = function() {
-		
-		
 		
 		finlist = finalList;
 		for(i = 0; i < finlist.length; i++){

@@ -9,8 +9,6 @@ MarathonName = '';
 MarathonPlace = '';
 MarathonDate = '';
 MarathonTime = '';
-
-
 	
 	this.addObserver = function(observer) {
 		observerlist.push(observer);
@@ -19,7 +17,6 @@ MarathonTime = '';
 	var notifyObservers = function(obj) {
 		for(i in observerlist) {
 			observerlist[i].update(obj);
-			console.log(obj);
 		}
 	} 
 
@@ -84,6 +81,8 @@ MarathonTime = '';
 	//Get total Runtime of your Marathon
 	this.getRuntime = function(finalList){
 		var time = 0
+		finalList = deletedub(finalList);
+		console.log(finalList);
 		for (var i=0; i<finalList.length; i++){
 			//i=int(i);
 			if (finalList[i].runtime==null){
