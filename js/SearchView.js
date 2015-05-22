@@ -34,15 +34,16 @@ var SearchView = function (container, Model) {
 	this.update();
 
 //gets the last movietitle that the user searched for and prints it in the serach box
-	x=Model.getSearchword();
-	var text= "";
+	var x = Model.getSearchword();
+	var text="";
 	
-	if (x==undefined) {
-		text="Enter motve title"
+	if (x == "null"){
+		text="EnterMotveTitle";
 	}
 	else{
 		text=x;
 	}
+	
 	searchBox="<input id='searchword' type='text' class='form-control' placeholder="+ text+">";
 	      		
 	this.test.html(searchBox);
