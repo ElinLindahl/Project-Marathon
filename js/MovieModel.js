@@ -75,16 +75,13 @@ MarathonTime = '';
 			m = Model.getmovie(i);
 			movObjList.push(m);
 		}
-		console.log(movObjList);	
 	}
 	
 	//Get total Runtime of your Marathon
 	this.getRuntime = function(finalList){
 		var time = 0
 		finalList = deletedub(finalList);
-		console.log(finalList);
 		for (var i=0; i<finalList.length; i++){
-			//i=int(i);
 			if (finalList[i].runtime==null){
 				time += parseInt(90);
 			}	
@@ -121,13 +118,13 @@ MarathonTime = '';
 	}
 
 
-	
+	//Stores the latest searchword
 	this.setSearchword = function(theWord){	
  	   localStorage.setItem("name", theWord);
     } 
 
 
-  
+    //Gets the searchhword from local storage 
 	this.getSearchword = function(){
 		name=localStorage.getItem("name");		
 		return name;

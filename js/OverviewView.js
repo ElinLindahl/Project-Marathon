@@ -19,9 +19,17 @@ var OverviewView = function (container, Model) {
 		var minutes = RT % 60;
 		
 		var ET=Model.setEndtime(Model.MarathonTime, RT);
+		var end="";
+	
+		//Checks if the starttime was chosen
+		if (ET == "NaN.NaN"){
+			end="(No start-time was chosen)";
+		}
+		else{
+			end=ET;
+		}
 
-
-		str+= "<h3>Total Runtime: " + hours + " h and " + minutes + " min </br> Your marathon will end at: " + ET + "</h3>";//+ ET +"!";
+		str+= "<h3>Total Runtime: " + hours + " h and " + minutes + " min </br> Your marathon will end at: " + end + "</h3>";
 		this.test.html(str);
 	}
 	this.update();

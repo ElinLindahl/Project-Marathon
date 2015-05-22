@@ -33,7 +33,7 @@ var SearchView = function (container, Model) {
 
 	this.update();
 
-//gets the last movietitle that the user searched for and prints it in the serach box
+    //gets the last movietitle that the user searched for and prints it in the serach box
 	var x = Model.getSearchword();
 	var text="";
 	
