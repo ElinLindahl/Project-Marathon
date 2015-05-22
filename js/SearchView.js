@@ -38,7 +38,7 @@ var SearchView = function (container, Model) {
 	var text="";
 	
 	if (x == "null"){
-		text="EnterMotveTitle";
+		text="EnterMovieTitle";
 	}
 	else{
 		text=x;
