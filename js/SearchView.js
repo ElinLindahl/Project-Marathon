@@ -44,7 +44,7 @@ var SearchView = function (container, Model) {
 		text=x;
 	}
 	
-	searchBox="<input id='searchword' type='text' class='form-control' placeholder="+ text+">";
+	searchBox="<input id='searchword' type='text' class='form-control' value="+ text+">";
 	      		
 	this.test.html(searchBox);
 	
