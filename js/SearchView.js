@@ -3,6 +3,7 @@ var SearchView = function (container, Model) {
 	this.searchbutton = container.find("#searchbutton");
 	this.AllMovies = container.find(".movies");
 	this.deletebutton = container.find("#deletebutton");
+	this.test = container.find("#searchBoxx");
 	box = '';
 
 	this.update = function(obj){
@@ -29,7 +30,23 @@ var SearchView = function (container, Model) {
 			this.tryIt();
 	}
 
+
 	this.update();
+
+//gets the last movietitle that the user searched for and prints it in the serach box
+	x=Model.getSearchword();
+	var text= "";
+	
+	if (x==undefined) {
+		text="Enter motve title"
+	}
+	else{
+		text=x;
+	}
+	searchBox="<input id='searchword' type='text' class='form-control' placeholder="+ text+">";
+	      		
+	this.test.html(searchBox);
+	
 	
 	
 	Model.addObserver(this);

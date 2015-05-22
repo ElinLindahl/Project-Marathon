@@ -120,6 +120,19 @@ MarathonTime = '';
 		}
 	}
 
+
+	
+	this.setSearchword = function(theWord){	
+ 	   localStorage.setItem("name", theWord);
+    } 
+
+
+  
+	this.getSearchword = function(){
+		name=localStorage.getItem("name");		
+		return name;
+	}
+
 		
 	
 }
